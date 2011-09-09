@@ -1,0 +1,73 @@
+body {
+	background: black url("") fixed repeat;
+	background-position: 40% 0%;
+	height: 100%;
+}
+
+#sidebar {
+	background: url("") repeat-y fixed -25px 0px black; 
+	height: 100%;
+	/* This tucks the sidebar graphic to the left... the negative integer should correspond with the width of the sidebar */
+}
+
+/* This is your navigation hover color */
+#sidebar .navigation li a:hover, #sidebar .box a:hover{
+	color: #ffd601;
+}
+
+/* This is your navigation selected link color */
+#sidebar .navigation li.current,
+#sidebar .navigation li.current a{
+	color: #ffd601;
+}
+
+#content a{color: #ffd601;}
+#content a:hover {color: #ffc601;}
+#content a:visited {color: #ffd601;}
+
+
+/* Use this to make your grid and entry content black */
+#entry {background: black; color: #ddd; border: 0;}
+#sub-sidebar {background: black; color: #ddd; border: 0}
+.module_dates{ background: none repeat scroll 0 0 black;}
+
+#content h1, #content h2,#content h3,#content h4,#content h5,#content h6{color: #FFF;}
+
+#grid-content li{background: black; border: 1px solid #333; color: #FFF;}
+#grid-content li img{border: 1px solid #111;}
+#grid-content li h2, #grid-content li h2 a, #grid-content li h2 a:visited{color: white;}
+
+#grid-content li .module p, #grid-content li .module p a, #grid-content li .module p a:visited {	
+    color: #7F7F7F;
+    font: italic 11px/15px Georgia;
+}
+
+.commentlist .comment-body {
+    background: none repeat scroll 0 0 #111;
+    border: 1px solid #333;
+}
+
+#page-title h1 {
+    -moz-border-radius: 5px 0 0 0;
+    background: none repeat scroll 0 0 #222;
+    border-bottom: 1px solid #252525;
+    font-size: 14px;
+    margin: -30px -30px 20px;
+    padding: 15px;
+}
+
+hr {
+    background-color: #262626;
+    background-image: url("../img/border_w.gif");
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    border: medium none #333;
+    height: 2px;
+    margin: 5px 0 8px;
+}
+
+.taxonomy a {
+    -moz-border-radius: 5px 5px 5px 5px;
+    background: none repeat scroll 0 0 #111;
+    border: 1px solid #333;
+}

@@ -1,0 +1,30 @@
+body {
+	background: url("skinImages/main_bg.jpg") repeat top left;
+}
+
+#sidebar {
+	background: url("skinImages/sidebar_bg.png") repeat-y fixed -25px 0px transparent; 
+	height: 100%;
+	/* This tucks the sidebar graphic to the left... the negative integer should correspond with the width of the sidebar */
+}
+
+/* This is your navigation hover color */
+#sidebar .navigation li a:hover{
+	color: #0998db;
+}
+
+/* This is your navigation selected link color */
+#sidebar .navigation li.current,
+#sidebar .navigation li.current a{
+	color: #0998db;
+}
+
+#content a{color: #0998db;}
+#content a:hover {color: #0998db;}
+#content a:visited {color: #0998db;}
+
+#entry{background: white; border: 1px solid #ddd}
+#sub-sidebar{background: #ededed;}
+
+#sub-sidebar h2 a, #sub-sidebar h2 a:visited{color: #333;}
+#sub-sidebar a, #sub-sidebar a:visited{color: #0998db}

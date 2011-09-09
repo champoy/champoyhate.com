@@ -1,0 +1,530 @@
+@import url('reset.css');
+@import url('tipsy.css');
+
+html {}
+
+body{
+	background: url(../img/main_bg.jpg) repeat top left; /* Override this in quick-styles.css */
+	font: 12px 'Helvetica Neue', Arial, sans-serif;
+	color: #7f7f7f;		
+	height: 100%;
+}
+
+
+/* BASIC HEADLINE TYPOGRAPHY */
+h1{font-size: 26px;}
+#sidebar h2 {font-size: 15px; font-weight: bold; color: #666}
+#sub-sidebar h2 {font-size: 17px; font-weight: bold; color: #333; margin-bottom: 2px;}
+h2{font-size: 20px; font-weight: bold;}
+h3{font-size: 17px;}
+h4{font-size: 14px;}
+h5{font-size: 13px; font-weight: bold; text-transform: uppercase;}
+h6{font-size: 12px; font-weight: bold; text-transform: uppercase;}
+
+/* This adjusts the weight for the Cufon Font Elements - Bold or Normal */
+#grid-content h2 {font-weight: normal;}
+#sidebar h2, ul.navigation li, #sidebar h3{font-weight: bold;}
+
+
+
+/* SIDEBAR */
+#sidebar{	
+	width: 285px; /* Adjusts the width of the sidebar... but also where the vGrid wrapper starts */
+	float: left;
+	margin: 0 15px 0 0;
+	height: 100%;
+	position: fixed; /* Remove this to allow extra tall sidebars that scroll (not recommended as it's not tested across browsers) */
+}
+	
+	#sidebar .logo{
+		text-align: center;
+		padding: 30px 0 30px 3px; /* Adjust the spacing of your logo here. */
+	}
+
+	#sidebar .navigation{
+		background: #000000;
+	}
+	
+		#sidebar .navigation>li{
+			background: url('../img/dot.gif') repeat-x;
+			padding: 10px 0 9px 25px;
+			text-transform: uppercase;
+			font-size: 15px;
+		}
+		
+			#sidebar .navigation>li>ul{
+				padding-left: 15px;
+				display: none;
+			}
+			
+			#sidebar .navigation>li>ul>li{
+				padding-top: 6px;
+				font-size: 12px;
+			}
+
+			#sidebar .navigation li a:link,
+			#sidebar .navigation li a:visited{
+				color: #FFF;
+			}
+						
+			/* This is your highlight color! */
+			#sidebar .navigation li a:hover{
+				color: #666666;
+			}
+			
+			#sidebar .navigation li.current,
+			#sidebar .navigation li.current a{
+				color: #666666;
+			}
+			
+	#sidebar .box{
+		background: #000 url('../img/dot.gif') repeat-x;
+		padding: 0;
+	}
+	
+		#sidebar .box h2{
+			margin-bottom: 4px;
+		}
+		
+		#sidebar .box h3{
+			text-transform: normal;
+			color: #FFF;
+			font-size: 15px;			
+		}
+		
+		#sidebar .box ul li{
+			background: #000 url('../img/dot.gif') repeat-x;
+		}
+			
+			#sidebar .box ul li ul li{
+				background: none;
+			}
+		
+		#sidebar .box form.search{
+		
+		}
+		
+			#sidebar .box form.search p{
+				float: left;
+				line-height: 22px;
+				margin-right: 5px;
+			}
+			
+				#sidebar .box form.search p img{
+					vertical-align: middle;
+				}
+			
+			#sidebar .box form.search input{
+				font: 12px Tahoma, Arial, sans-serif;
+				background: #494949;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px; 
+				border-radius: 5px;
+				border: 1px solid #474747;
+				color: #FFF;
+			}
+			
+				#sidebar .box form.search input[type=text]{
+					width: 155px; /* This used to be AUTO */
+				} 
+			
+			#sidebar .box form.search input.button{
+				text-transform: uppercase;
+				background: #2f2f2f;
+				font-size: 10px;
+				padding: 4px 7px 4px 7px;
+				font-weight: bold;
+			}
+	
+	#sidebar ul.widget-area li:first-child{
+		background: none;
+	}
+	
+	#sidebar ul.widget-area>li{
+		padding: 15px 15px 15px 25px;
+	}
+	
+	#sidebar ul.widget-area>li>ul>li{
+		padding: 2px 0 2px 0;
+	}
+	
+	#sidebar .textwidget ul li{
+		padding: 10px 0 10px 0;
+	}
+	
+	#sidebar h3{}
+		
+	#sidebar .widget_text .icon{
+		float: left;
+		margin: 0 15px 0 0;
+		width: 40px;
+	}
+	
+	#sidebar .widget_text{
+		padding-bottom: 7px !important;
+	}			
+	
+	#sidebar .social{height: 16px; overflow: hidden;}
+
+	#sidebar .social img, #sub-sidebar .social img{
+		-moz-opacity:0.4;
+		opacity:0.4;
+		filter: alpha(opacity=40);
+	}
+	
+	#sidebar .social img:hover, #sub-sidebar .social img:hover{
+		-moz-opacity:1;
+		opacity:1;
+		filter: alpha(opacity=100);
+	} 
+	
+	#sub-sidebar .social{padding-bottom: 1px; margin-top: -17px;}
+	#sub-sidebar .social a{
+		display: block;
+    	float: left;
+    	width: 20px;    	
+    }
+	
+	#sidebar .close_dot{
+		background: url('../img/dot.gif') repeat-x;
+		display: block;
+		height: 1px;
+	}
+	
+	#sidebar .anchor{	
+	vertical-align: bottom;
+	}
+
+	#sidebar .box a, #sidebar .box a:visited{color: white;}
+
+
+
+/* CONTENT AREA & VGRID */
+#content{
+	padding-top: 25px;
+	padding-left: 297px; /* Only Needed when the sidebar is positionally fixed. This is the "left padding". The amount should match the sidebar width more or less. */
+}
+
+#content.no-grid{
+	padding-left: 0 !important; /* This resets the left padding for non-grid pages. */
+} 
+
+#grid-content {
+	overflow: hidden;
+	height: 0;
+}
+
+
+
+/* CSS for the vGrid Elements */
+/* Visit the end of the file to see how to manually lock a specific height/width for each module */
+
+#grid-content li{
+	background: #FFF;
+	width: auto; /* was 200px originally - now this is defined by the image size */
+	height: auto; /* was 200px originally - now this is defined by the image size */
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px; 
+	border-radius: 5px;
+	padding: 10px;
+	display: block;
+	border: 1px solid #eaeae8;
+	margin: 5px;
+}
+
+/* This next line tells the module text when to "wrap". Set this to "auto" for grids to attempt sizing themselves dynamically (not recommended) */
+#grid-content .module{width: 200px;}
+
+	#grid-content li h2,
+	#grid-content li h2 a,
+	#grid-content li h2 a:visited,
+	.vcard, .vcard a{
+		color: #000;
+		font-size: 15px;
+		margin-top: 10px;
+		margin-bottom: 3px;
+	}
+	
+	#grid-content li .module p{
+		font: italic 11px/15px Georgia;		
+		color: #7f7f7f;
+	}
+	#grid-content li img{
+		display: block;
+		border: 1px solid #eaeae8;
+		padding: 3px;
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		border-radius: 2px;
+	}
+
+#grid-content li h3 {
+	line-height: 1.1em;
+	margin: 0;
+	padding: 0;
+}
+#grid-content li p {
+	margin: 0;
+	padding: 0;
+}
+
+
+
+/* CONTENT AREA for Non-GRID PAGES */
+/* Note that quite a bit of the UI and other Typographical Styling for this section is located in reset.css */
+
+.entry-container{ 
+	margin: 0 auto;		 /* Auto-Center the Content - Set to "0 0" for no centering */
+    padding-left: 288px; /* The main offset for the left sidebar */
+    width: 970px; 		 /* The width of the post/page content - must be set for centering */
+}
+
+#entry{
+	background: #FBFBFB;
+	float: left;
+	width: 600px; /* This is the width of the entry column - You'll also need to adjust the ".entry-container" and "#sub-sidebar" to make heavy changes */
+	height: auto; 
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px; 
+		border-radius: 5px;		
+		-webkit-border-top-right-radius: 0px;
+		-moz-border-radius-topright: 0px;
+		border-top-right-radius: 0px;				
+	padding: 30px;
+	display: block;
+	border: 1px solid #FBFBFB;
+	margin: 5px;
+	z-index: 2;
+	overflow: hidden; /* For Image Overflows */
+}
+
+#entry.full-width{
+	width: 800px; 
+	height: auto; 	
+}
+
+#entry, #sub-sidebar{
+	line-height: 18px;
+}
+
+#entry h1{
+	font-size:26px;
+	color: #222;
+	margin-bottom: 10px;
+}
+
+#entry h2, #entry h3, #entry h4, #entry h5, #entry h6{
+	margin-top: 20px;
+	color: #444;
+}  
+
+hr {
+    background-color: #DDD;
+    background-image: url("../img/border_w.gif");
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    border: medium none #DDD;
+    height: 2px;
+    margin: 5px 0 8px;
+}
+
+#entry .section-spacer{height: 600px;}
+
+#sub-sidebar{
+	background: #FBFBFB url(../img/main_bg.jpg) repeat top left; /* Override this in quick-styles.css */
+	float: left;
+	width: 260px; /* was 200px originally - now this is defined by the image size */
+	height: auto; 
+		-webkit-border-top-right-radius: 5px;
+		-webkit-border-bottom-right-radius: 5px;
+		-moz-border-radius-topright: 5px;
+		-moz-border-radius-bottomright: 5px;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;	
+	padding: 20px;
+	display: block;
+	border: 1px solid #ddd;
+	margin: 5px 0px 5px -6px;
+	z-index: 1;
+}
+
+#entry ul li, #sub-sidebar ul li ul li {
+	list-style: none;
+	background: transparent url(../img/ui/bullets/silver.gif) no-repeat 0
+		.2em;
+	padding-left: 20px;
+}
+
+#sub-sidebar ul li ul{padding: 3px 0;}
+
+.widget-divider{height: 30px;}
+
+
+.left_col{float: left; width: 44%;}
+.right_col{float: right; width: 44%;}
+.clear{margin: 10px 0 !important; clear:both;}
+.superquote{clear: both; margin: 40px 0; font-size: 26px; font-style: italic; font-family: Georgia; line-height: 34px; padding-left: 20px; }
+
+
+/* AD 4x4 Block (with IE hacks for padding) */
+#sub-sidebar ul.no-bullets li{
+	list-style-type: none;
+	background: none;
+    margin-left: 0;
+    padding-left: 0; 
+    padding-right: 5px;   
+    float: left;
+}
+
+#sub-sidebar ul.no-bullets li:nth-child(2n){
+    padding-right: 0px;   
+}
+
+* html #sub-sidebar ul.no-bullets li {padding-right: 3px;   ;} /* for IE6 */
+*+html #sub-sidebar ul.no-bullets li {padding-right: 3px;   ;} /* for IE7 */
+#sub-sidebar ul.no-bullets li{padding-right: 3px\0/;} /* for IE8, going last */
+
+
+
+/* !!! Pagination and Page Taxonomy Styling (for Archives - ie: Search Results for XXX) !!!! */
+
+#identification{
+	background: #FFF;
+	width: auto; /* was 200px originally - now this is defined by the image size */
+	height: auto; /* was 200px originally - now this is defined by the image size */
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px; 
+	border-radius: 5px;
+	padding: 10px;
+	display: block;
+	border: 1px solid #eaeae8;
+	margin: 5px;	
+}
+
+#identification h1{font-size: 17px; color: #222; margin: 5px 0;}
+
+.taxonomy a{
+	background: #FFF;
+	width: auto; /* was 200px originally - now this is defined by the image size */
+	height: auto; /* was 200px originally - now this is defined by the image size */
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px; 
+	border-radius: 5px;
+	padding: 3px 5px 4px;
+	border: 1px solid #eaeae8;
+	margin: 1px;		
+	text-transform: uppercase;
+	line-height: 28px;
+}
+
+.taxonomy br{display: none;}
+
+#identification a{font-size: 11px !important;}
+
+#identification p{margin: 6px 0 4px;}
+
+#pagination{margin: 0 5px; position: absolute; bottom: 0px;}
+
+.p a, .m a{padding: 10px 10px 5px;	
+	-webkit-border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px; 
+	border-radius: 5px 5px 0px 0px;	
+}
+
+.p, .m{	display: block;
+	float: left;
+	margin-right: 5px;}
+
+
+
+
+
+/* !!! Vertical Blog Mods !!!!!!!!!!!!!!!!!!!!! */
+.vert-blog .post-img{float: left; margin: 0 10px 10px 0;}
+.vert-blog h2{margin-top: 0px !important;}
+
+#page-title h1{
+	background: #eee; 
+	font-size: 14px; 
+	padding: 15px; 
+	margin: -30px -30px 20px;	
+	
+	-webkit-border-radius: 5px 0px 0px 0px;
+	-moz-border-radius: 5px 0px 0px 0px; 
+	border-radius: 5px 0px 0px 0px;	
+	
+	border-bottom: 1px solid #ddd;
+}
+
+ /* !!! Gallery Mods !!!!!!!!!!!!!!!!!!!!! */
+.gallery p{margin: 0 0 5px 0 !important;}
+.gallery{margin-bottom: -20px;}
+
+
+/* !!! CSS CUSTOMIZATIONS !!!!!!!!!!!!!!!!!!!!! */
+/* !!! CSS CUSTOMIZATIONS !!!!!!!!!!!!!!!!!!!!! */
+/* !!! CSS CUSTOMIZATIONS !!!!!!!!!!!!!!!!!!!!! */
+/* !!! These are mostly for advanced users... play around with these at your own peril, but have fun! !!!!!!!!!!!!!!!!!!!!! */
+
+/* CSS Width / Height LOCKDOWN - Uncomment this when you want all grid images to be cropped uniformly. 
+#grid-content li img{
+	width: 200px !important; 
+	height: 130px !important; 
+	overflow: hidden;
+	}
+*/
+
+
+/* CSS Width / Height LOCKDOWN - Uncomment this when you want all grid titles/descriptions to be cropped uniformly */
+#grid-content .module {
+	height: 48px !important;
+	width: 200px; /* This can also be set to "200px !important" if you want to override any inline re-scaling. */ 
+	overflow: hidden;	
+	}
+
+	
+/* NO-TEXT Version - Apply this ".no-text" class to your "grid-content LI's" to use the "No-Text" version of the grids. */
+#grid-content li.no-text .module {
+	visibility: hidden !important; 
+	height: 0px !important; 
+	width: 0px !important; 
+	padding: 0px !important; 
+	margin: 0px !important; 
+	overflow: hidden !important;
+}
+
+/* This is for the AJAX loader */
+#loading{
+	position: absolute;
+	z-index: 999;
+	width: 100px;
+	text-align: center;
+	left:55%;
+	padding: 5px;
+	background: #FFF;
+	top: 40%;
+	display: none;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	border: 1px solid #eaeae8;
+	text-transform: uppercase;
+	font-size: 11px;
+}
+
+.ppt{display: none !important;}
+
+
+/* !!! Version 1.0.2b CSS Tweaks !!!!!!!!!!!!!!!!!!!!! */
+#entry h2 a, #entry h2 a:visited{color: #444444;}
+.module_dates{
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		border-radius: 2px;
+    background: none repeat scroll 0 0 white;
+    font-size: 8.5px;
+    height: 12px;
+    padding: 1px 1px 1px 2px;
+    position: absolute;
+    right: 12px;
+    top: 133px;}

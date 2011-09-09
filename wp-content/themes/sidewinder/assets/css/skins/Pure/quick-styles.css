@@ -1,0 +1,27 @@
+body {
+	background: white url("") repeat;
+	background-position: 40% 0%;
+	height: 100%;
+} 
+
+#sidebar {
+	background: black url(); 
+	color: black;
+	height: 100%;
+	/* This tucks the sidebar graphic to the left... the negative integer should correspond with the width of the sidebar */
+}
+
+/* This is your navigation hover color */
+#sidebar .navigation li a:hover{
+	color: #f52e87;
+}
+
+/* This is your navigation selected link color */
+#sidebar .navigation li.current,
+#sidebar .navigation li.current a{
+	color: #8a1b6f;
+}
+
+#content a{color: #8a1b6f;}
+#content a:hover {color: #f52e87;}
+#content a:visited {color: #8a1b6f;}

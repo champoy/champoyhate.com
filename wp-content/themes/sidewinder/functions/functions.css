@@ -1,0 +1,142 @@
+
+
+.bj_wrap{
+	width:960px;
+	margin-bottom:40px;
+}
+.bj_section{
+	border-bottom:0;
+	background:#f9f9f9;
+	border:1px solid #dedede;
+}
+
+	.bj_section .bj_section{
+		border-bottom:0;
+		margin: 10px 10px -10px;
+		background:#f9f9f9;
+		border:1px solid #dedede;
+	}
+	
+	.bj_section .bj_section input[type="text"]{
+		width: 560px !important;
+	}
+	
+	.description{font-size: 10px !important; font-style: normal !important;}
+	.center{padding: 12px 10px !important; background: #fffef1 !important;}
+	
+.bj_opts label{
+	font-size:12px;
+	font-weight:700;
+	width:130px;
+	display:block;
+	float:left;
+}
+.bj_input {
+	padding:20px 10px;
+	border-bottom:1px solid #ddd;
+	border-top:1px solid #fff;
+}
+
+.bj_options {
+	font-family: Arial, 'Arial', sans-serif;
+	
+}
+
+.bj_opts small{
+	display:block;
+	float:right;
+	width:210px;
+	color:#666;
+}
+.bj_opts input[type="text"]{
+	width:580px;
+	font-size:10px;
+	padding:6px 6px 7px;
+	color:#333;
+	line-height:1em;
+	background:#f3f3f3;
+}
+
+.bj_opts select{
+	width:280px;
+	font-size:12px;
+	padding:4px;
+	color:#333;
+	line-height:1em;
+	background:#f3f3f3;
+}
+
+.bj_input input:focus, .bj_input textarea:focus{
+		background:#fff;
+}
+.bj_input textarea{
+	width:580px;
+	height:175px;
+	font-size:12px;
+	padding:4px;
+	color:#333;
+	line-height:1.5em;
+	background:#f3f3f3;
+}
+.bj_title h3 {
+	cursor:pointer;
+	font-size:1em;
+	text-transform: uppercase;
+	margin:0;
+	font-weight:bold;
+	color:#232323;
+	float:left;
+	width:80%;
+	padding:16px 6px 0;
+}
+.bj_title{
+	cursor:pointer;
+	border-bottom:1px solid #ddd;
+	background:#ebebeb url('images/title-grad.jpg') repeat-x;
+	padding:0;
+}
+.bj_title h3 img.inactive{
+	margin:-8px 10px 0 2px;
+	width:32px;
+	height:31px;
+	background:#f3f3f3 url('images/pointer.png') no-repeat 0 0;
+	float:left;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #ccc;
+}
+.bj_title h3 img.active{
+	margin:-8px 10px 0 2px;
+	width:32px;
+	height:31px;
+	background:#fbfbfb url('images/pointer.png') no-repeat  0 -32px;
+	float:left;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border:1px solid #ddd;
+}
+.bj_title h3:hover img{
+	border:1px solid #aaa;
+}
+.bj_title span.submit{
+	display:block;
+	float:right;
+	margin:0;
+	padding:0;
+	width:15%;
+	padding:14px 0;
+}
+.clearfix{
+	clear:both;
+}
+#message{background-color:#E3F7FF; border-color:#B1E3F8;}
+
+.bj_table th, .bj_table td{
+	border:1px solid #bbb;
+	padding:10px;
+	text-align:center;
+}
+.bj_table th, .bj_table td.feature{
+	border-color:#888;
+	}
